@@ -15,6 +15,13 @@ const nextConfig = {
     styledComponents: true
   },
 
+        const result = updateFCMToken(req.params.address, req.params.token)
+
+        if (result === false) {
+          res.writeHead(400, {
+            'Content-Type': 'text/html'
+          })
+
                 if (Meteor.isClient){
                     transactionsHandle = Meteor.subscribe('transactions.validator', props.validator, props.delegator, props.limit);
                     loading = !transactionsHandle.ready();
